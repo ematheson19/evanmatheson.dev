@@ -214,3 +214,10 @@ body {
         margin-right: 20%;
     }
 }
+
+@media (max-width: 480px) {
+    .portfolio .item {
+        height: 300px;
+        width: 95%;
+    }
+}
