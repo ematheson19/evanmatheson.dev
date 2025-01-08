@@ -71,9 +71,9 @@ body {
 .links a {
     text-decoration: none;
     color: rgb(203 213 225);
-    font-size: 1.1rem;
-    margin: 10px;
-    padding: 10px 20px;
+    font-size: 20px;
+    margin: 0 30px;
+    padding: 0 10px 5px;
     transition: background-color 0.3s;
     font-weight: bold;
 }
@@ -213,10 +213,6 @@ body {
         font-size: 1.25rem;
     }
 
-    .links a {
-        font-size: 1rem;
-    }
-
     .about {
         margin-left: 5%;
         margin-right: 5%;
@@ -242,6 +238,9 @@ body {
     .nav a {
         margin-left: -10%;
         margin-right: -10%;
+    }
+    .links a {
+        margin: 0 50px;
     }
 }
 
