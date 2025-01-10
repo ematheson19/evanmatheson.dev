@@ -76,7 +76,7 @@ body {
 .links a {
     text-decoration: none;
     color: rgb(203 213 225);
-    font-size: 20px;
+    font-size: 15px;
     margin: 0 40px;
     padding: 0 10px 5px;
     transition: background-color 0.3s;
@@ -204,7 +204,7 @@ body {
     color: #ffffff;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 2000px) {
     .header h1 {
         font-size: 2.5rem;
     }
@@ -248,12 +248,20 @@ body {
 
     .links a {
         margin: 0 50px;
+        font-size: 20px;
     }
 }
 
-@media (max-width: 480px) {
+@media (min-width: 650px) {
+    .links a {
+        margin: 0 50px;
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 500px) {
     .portfolio .item {
-        height: 250px;
+        height: 300px;
         width: 95%;
     }
 
