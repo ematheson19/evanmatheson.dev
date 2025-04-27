@@ -3,7 +3,7 @@ name: Deploy to FTP
 on:
   push:
     branches:
-      - main  # Trigger deploy on push to the main branch
+      - main
 
 jobs:
   deploy:
@@ -11,15 +11,15 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Deploy to FTP
-        uses: SamKirkland/FTP-Deploy-Action@v4  # Use v4 instead of v5
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5  # Updated to the latest version
         with:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           port: ${{ secrets.FTP_PORT }}
           protocol: ${{ secrets.FTP_PROTOCOL }}
-          local-dir: '.'  # This is your local directory, usually the root of your repo
-          remote-dir: '/public_html'  # Replace with the correct remote directory on your server
+          local-dir: '.'  # Path to the local directory (your site files)
+          remote-dir: '/public_html'  # Your actual remote directory on the server
