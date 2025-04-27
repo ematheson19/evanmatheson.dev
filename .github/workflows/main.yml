@@ -22,4 +22,4 @@ jobs:
           port: ${{ secrets.FTP_PORT }}
           protocol: ${{ secrets.FTP_PROTOCOL }}
           local-dir: '.'
-          remote-dir: '/public_html'
+          remote-dir: '/public_html'  # Replace with your actual directory path
