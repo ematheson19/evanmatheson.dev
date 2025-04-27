@@ -1,24 +1,25 @@
-name: Deploy Static Website to cPanel via FTP
+name: Deploy to FTP
 
 on:
   push:
     branches:
-      - main  # Trigger on changes to the main branch
+      - main  # Trigger deploy on push to the main branch
 
 jobs:
   deploy:
-    runs-on: ubuntu-latest  # You can use a different runner if needed
+    runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout code
+      - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Deploy to FTP server
+      - name: Deploy to FTP
         uses: SamKirkland/FTP-Deploy-Action@v5
         with:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: '.'  # Use the root directory for your project
-          remote-dir: 'public_html'  # Upload to the public_html folder
-          log-level: debug  # Optional: Set log level to debug for troubleshooting
-
+          port: ${{ secrets.FTP_PORT }}
+          protocol: ${{ secrets.FTP_PROTOCOL }}
+          local-dir: '.'
+          remote-dir: '/public_html'
