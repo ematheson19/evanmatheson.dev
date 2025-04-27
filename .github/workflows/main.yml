@@ -3,23 +3,23 @@ name: Deploy to FTP
 on:
   push:
     branches:
-      - main
+      - main  # Runs the deployment when changes are pushed to the 'main' branch
 
 jobs:
   deploy:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest  # Runs the deployment on a Linux runner
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v4  # Checks out the code from your GitHub repository
 
       - name: Deploy to FTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5  # Updated to the latest version
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5  # FTP deployment action
         with:
-          server: ${{ secrets.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          port: ${{ secrets.FTP_PORT }}
-          protocol: ${{ secrets.FTP_PROTOCOL }}
-          local-dir: '.'  # Path to the local directory (your site files)
-          remote-dir: '/public_html/'  # Your actual remote directory on the server
+          server: ${{ secrets.FTP_SERVER }}  # FTP server address stored in secrets
+          username: ${{ secrets.FTP_USERNAME }}  # FTP username stored in secrets
+          password: ${{ secrets.FTP_PASSWORD }}  # FTP password stored in secrets
+          port: ${{ secrets.FTP_PORT }}  # FTP port stored in secrets
+          protocol: ${{ secrets.FTP_PROTOCOL }}  # FTP protocol (ftp or sftp) stored in secrets
+          local-dir: './'  # Deploy all files from the root of your repository
+          remote-dir: '/public_html'  # Replace with your actual remote directory path
