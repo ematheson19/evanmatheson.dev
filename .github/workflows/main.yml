@@ -14,12 +14,12 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Deploy to FTP
-        uses: SamKirkland/FTP-Deploy-Action@v5
+        uses: SamKirkland/FTP-Deploy-Action@v4  # Use v4 instead of v5
         with:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           port: ${{ secrets.FTP_PORT }}
           protocol: ${{ secrets.FTP_PROTOCOL }}
-          local-dir: '.'
-          remote-dir: '/public_html'  # Replace with your actual directory path
+          local-dir: '.'  # This is your local directory, usually the root of your repo
+          remote-dir: '/public_html'  # Replace with the correct remote directory on your server
