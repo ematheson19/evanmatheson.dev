@@ -22,4 +22,4 @@ jobs:
           port: ${{ secrets.FTP_PORT }}  # FTP port stored in secrets
           protocol: ${{ secrets.FTP_PROTOCOL }}  # FTP protocol (ftp or sftp) stored in secrets
           local-dir: './'  # Deploy all files from the root of your repository
-          remote-dir: '/public_html'  # Replace with your actual remote directory path
+          remote-dir: 'public_html'  # Upload files to the public_html directory (without the leading /)
