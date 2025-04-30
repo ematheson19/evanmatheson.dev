@@ -6,9 +6,11 @@ I am a passionate coder, with a strong focus on Front End Development. I am curr
 
 Some of the technologies I am skilled in include:
 
-Frontend: HTML, CSS, JavaScript, jQuery
-Backend/Other: Python (basic knowledge)
-Additional Skills: Some experience with React.js and Java
+Frontend: HTML, CSS, JavaScript, and jQuery
+
+Backend/Other: PHP
+
+Additional Skills: Some experience with React.js, Java, and Python
 
 Feel free to explore my work and don’t hesitate to reach out if you have any questions or want to collaborate on a project. You can contact me via:
 
