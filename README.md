@@ -14,6 +14,6 @@ Feel free to explore my work and don’t hesitate to reach out if you have any q
 
 Email: evan_matheson@icloud.com
 
-LinkedIn: Your LinkedIn Profile Here]](https://www.linkedin.com/in/evan-matheson-2ba15633b?trk=people-guest_people_search-card
+LinkedIn: https://www.linkedin.com/in/evan-matheson-2ba15633b?trk=people-guest_people_search-card
 
 Thank you for visiting my portfolio. I hope you enjoy browsing through my work!
