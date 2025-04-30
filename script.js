@@ -1,39 +1,19 @@
-const profileImg = document.getElementById('profile-img');
-const about = document.querySelectorAll('.about');
-const header = document.querySelectorAll('.header');
-const links = document.querySelectorAll('.links');
-const portfolio = document.querySelectorAll('.portfolio');
+$(document).ready(function () {
+    // Animate sections on load (home + social links)
+    $("#home, .flex").removeClass("opacity-0 -translate-x-full").addClass("opacity-100 translate-x-0");
 
-profileImg.addEventListener('contextmenu', function (e) {
-    e.preventDefault();
-});
+    // Animate about and work sections when scrolled into view
+    function revealOnScroll() {
+        $(".reveal-on-scroll").each(function () {
+            const elementTop = $(this).offset().top;
+            const viewportBottom = $(window).scrollTop() + $(window).height();
 
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-        } else {
-            entry.target.classList.remove('visible');
-        }
-    });
-});
+            if (viewportBottom > elementTop + 100) {
+                $(this).removeClass("opacity-0 -translate-x-full").addClass("opacity-100 translate-x-0");
+            }
+        });
+    }
 
-window.onload = function () {
-    header.forEach((el, index) => {
-        setTimeout(() => {
-            el.classList.add('visible');
-        }, index * 300);
-    });
-
-    links.forEach((el, index) => {
-        setTimeout(() => {
-            el.classList.add('visible');
-        }, index * 300);
-    });
-};
-
-[...header, ...links, ...about, ...portfolio].forEach((el, index) => {
-    setTimeout(() => {
-        observer.observe(el);
-    }, index * 200);
+    revealOnScroll();
+    $(window).on("scroll", revealOnScroll);
 });

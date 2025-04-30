@@ -2,100 +2,112 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Evan's Portfolio Site</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="efavicon.ico" type="image/x-icon">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Evan Matheson | Web Developer</title>
+    <link rel="icon" href="efavicon.ico" type="image/x-icon" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <style>
+        body {
+            background: linear-gradient(to right, #ff6e7f, #3f2d61, #3a1c71);
+        }
+    </style>
 </head>
 
-<body>
-    <section>
-        <div id="home" class="header">
-            <img id="profile-img" draggable="false" src="myphoto1.JPG" alt="My Profile Photo">
-            <h1>Evan Matheson</h1>
-            <h3>A Student With A Major in Web Development</h3>
-            <p>Experience in front end web development with intentions to become a full-stack web developer in the
-                future
+<body class="text-white font-sans min-h-screen flex flex-col">
+
+    <section id="home" class="text-center px-6 py-20">
+        <img src="myphoto1.JPG" alt="My Profile Photo" draggable="false"
+            class="mx-auto h-40 w-40 rounded-full border-4 border-orange-400 shadow-lg" />
+        <h1 class="text-5xl font-extrabold mt-8 mb-4 text-orange-400">Evan Matheson</h1>
+        <h3 class="text-xl font-medium text-rose-200 mb-6">Creative Web Developer & Future Full-Stack Pro</h3>
+        <p class="text-rose-300 leading-relaxed max-w-2xl mx-auto text-lg">
+            Passionate about building sleek, performant, and user-friendly websites using the latest technologies. I
+            bring ideas to life on the web.
+        </p>
+        <div class="mt-10 flex justify-center space-x-8 text-lg font-bold">
+            <a href="https://www.linkedin.com" target="_blank" class="hover:text-orange-300">LinkedIn</a>
+            <a href="https://github.com/ematheson19" target="_blank" class="hover:text-orange-300">GitHub</a>
+            <a href="mailto:evan_matheson@icloud.com" class="hover:text-orange-300">Email</a>
+        </div>
+    </section>
+
+    <section id="about" class="px-6 md:px-32 py-24 bg-[#2a1a3c] text-rose-200">
+        <h1 class="text-4xl font-bold mb-10 text-center text-orange-400">About Me</h1>
+        <p class="text-lg leading-relaxed mb-6">
+            I'm Evan, a college student majoring in Web Development. My journey began with curiosity and has evolved
+            into a deep love for building elegant user interfaces.
+        </p>
+        <p class="text-lg leading-relaxed mb-6">
+            I'm proficient with HTML, CSS, and JavaScript, and have worked on multiple projects ranging from interactive
+            games to practical productivity tools.
+        </p>
+        <p class="text-lg leading-relaxed mb-6">
+            Currently, I'm seeking an internship where I can grow professionally and contribute to exciting web-based
+            projects.
+        </p>
+        <p class="text-lg leading-relaxed">
+            My dream is to become a remote full-stack web developer, combining front-end finesse with back-end logic to
+            craft seamless digital experiences.
+        </p>
+    </section>
+
+    <section id="client-work" class="px-6 md:px-32 py-20 bg-[#2a1a3c] text-rose-200">
+        <h1 class="text-4xl font-bold mb-12 text-center text-orange-400">Client Work</h1>
+
+        <div class="bg-[#1b1128] p-6 rounded-2xl shadow-lg hover:scale-105 transition-transform max-w-lg mx-auto">
+            <h2 class="text-2xl font-semibold mb-4 text-orange-400">Kay’s Cakes Website</h2>
+            <p class="mb-5 text-base leading-relaxed">
+                A professional website for a local baking business, built with HTML, CSS, Javascript, jQuery, and PHP.
+                Includes
+                a contact form, menu section, and responsive design.
             </p>
+            <a href="https://kayscakes.shop/" target="_blank">
+                <img src="kayscakesimg.jpg" alt="Kay’s Cakes Website" class="rounded-lg mb-2" />
+            </a>
         </div>
     </section>
 
-    <div class="links">
-        <a href="https://www.linkedin.com/in/evan-matheson-2ba15633b/" target="_blank">LinkedIn</a>
-        <a href="https://github.com/ematheson19" target="_blank">GitHub</a>
-        <a href="mailto:evan_matheson@icloud.com">Email</a>
-    </div>
+    <section id="work" class="px-6 md:px-32 py-24 bg-[#1b1128] text-rose-200">
+        <h1 class="text-4xl font-bold mb-10 text-center text-orange-400">Small Projects</h1>
 
-    <section>
-        <div id="about" class="about">
-            <h1>About Me</h1>
-            <p>Hi, I'm Evan, a college student majoring in Web Development.</p>
-            <br>
-            <p>Through my studies, I've primarily focused on front-end web development, gaining experience with HTML,
-                CSS,
-                and JavaScript. I completed courses in these technologies on FreeCodeCamp and have also finished my
-                first
-                semester in college with a focus on HTML and CSS. Additionally, I gained foundational knowledge in
-                Python
-                through an introductory programming class. I've always enjoyed problem-solving in web development and am
-                eager to continue building my skills.</p>
-            <br>
-            <p>Currently, my goal is to secure a front-end internship where I can apply my knowledge in a professional
-                setting. For my first framework, I am going to learn React, and I'm excited to gain real-world
-                experience
-                working with it. In the long term, I aspire to work as a full-stack software engineer.</p>
-            <br>
-            <p>Ultimately, my dream is to become a remote full-stack web developer, as I have a passion for travel. Once
-                I
-                gain sufficient experience, I plan to transition into freelance or contract work.</p>
+        <div class="grid md:grid-cols-3 gap-12">
+            <div class="bg-[#2a1a3c] p-6 rounded-2xl shadow-lg hover:scale-105 transition-transform">
+                <h2 class="text-2xl font-semibold mb-3 text-orange-400">Reaction Test Game</h2>
+                <p class="mb-4">Test your reflexes with this lightning-fast reaction game!</p>
+                <a href="https://ematheson19.github.io/reactiontest/" target="_blank">
+                    <img src="reactiontestimg.jpg" alt="Reaction Test Game" class="rounded-lg" />
+                </a>
+            </div>
+
+            <div class="bg-[#2a1a3c] p-6 rounded-2xl shadow-lg hover:scale-105 transition-transform">
+                <h2 class="text-2xl font-semibold mb-3 text-orange-400">To Do List</h2>
+                <p class="mb-4">Organize your day with this clean, interactive to-do app.</p>
+                <a href="https://ematheson19.github.io/todolist/" target="_blank">
+                    <img src="todolistimg.jpg" alt="To Do List App" class="rounded-lg" />
+                </a>
+            </div>
+
+            <div class="bg-[#2a1a3c] p-6 rounded-2xl shadow-lg hover:scale-105 transition-transform">
+                <h2 class="text-2xl font-semibold mb-3 text-orange-400">Weather App</h2>
+                <p class="mb-4">Check the weather anywhere with this stylish weather app.</p>
+                <a href="https://ematheson19.github.io/weatherapp/" target="_blank">
+                    <img src="weatherappimg.jpg" alt="Weather App" class="rounded-lg" />
+                </a>
+            </div>
         </div>
     </section>
 
-    <section>
-        <div id="work" class="portfolio">
-            <h1>My Work</h1>
-            <div class="description">
-                <h1>Reaction Test Game</h1>
-                <p>The Reaction Test game prompts users to click on the white screen. Once clicked, the screen starts
-                    red and randomly turns green. When it turns green, the game begins counting in milliseconds, and the
-                    user's score is displayed at the end. This game is built using HTML, CSS, and JavaScript.</p>
-            </div>
-            <div class="item">
-                <a target="_blank" href="https://ematheson19.github.io/reactiontest/"><img src="reactionimg.jpg"
-                        alt="Reaction Test"></a>
-            </div>
-            <div class="description">
-                <h1>To Do List</h1>
-                <p>The To Do List prompts users to type in a task, and then press add. Users may press the box to
-                    display a checkmark to show completion of their task, and then click on the x to remove the task.
-                    All tasks displayed will save until the x is clicked. This app is built
-                    using HTML, CSS, and JavaScript.</p>
-            </div>
-            <div class="item">
-                <a target="_blank" href="https://ematheson19.github.io/todolist/"><img src="todolistimg.jpg"
-                        alt="To Do List"></a>
-            </div>
-            <div class="description">
-                <h1>Weather App</h1>
-                <p>The Weather App prompts users to enter a city or country, and then provides the current weather by
-                    showing a symbol. At the bottom, it displays the wind speed and humidity. I used a fetch API from a
-                    weather website. This app is built using HTML, CSS, and JavaScript.</p>
-            </div>
-            <div class="item">
-                <a target="_blank" href="https://ematheson19.github.io/weatherapp/"><img src="weatherappimg.png"
-                        alt="To Do List"></a>
-            </div>
-        </div>
+    <footer class="bg-[#0d1220] text-center py-6">
+        <p class="text-indigo-300">© 2025 Evan Matheson | Designed & built with passion 💻</p>
+    </footer>
 
-    </section>
-    <div class="nav">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#work">Work</a>
-    </div>
-    <script src="script.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#home").removeClass("opacity-0 -translate-x-full").addClass("opacity-100 translate-x-0");
+        });
+    </script>
 </body>
 
 </html>
